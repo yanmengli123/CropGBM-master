@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.idea/
+.vscode/
+*.log
+catboost_info/
+ensemble_result/
+engine/
+preprocessed/
+structure/
+*.lgb_model
+*.png
+*.pdf
+.DS_Store
+CropGBM-Tutorial-data-main/
