@@ -1,0 +1,50 @@
+=======================================================
+CropGBM Ensemble: LGB + XGB + CatBoost (Fast Mode)
+Optuna 3-Trials + 3-Fold CV + Weighted Ensemble
+=======================================================
+
+[1] Loading data...
+  Train: 5643 samples, 4716 SNPs
+  Valid: 93 samples
+  Test: 100 samples
+
+[2] Optuna (3 trials x 3 models)...
+  Tuning LightGBM...
+    Best: 0.65405
+  Tuning XGBoost...
+    Best: 0.66128
+  Tuning CatBoost...
+    Best: 0.67383
+
+[3] 3-Fold CV training...
+  Fold 1/3  LGB=0.6539 XGB=0.6619 CAT=0.6745
+  Fold 2/3  LGB=0.6565 XGB=0.6595 CAT=0.6703
+  Fold 3/3  LGB=0.6518 XGB=0.6624 CAT=0.6766
+
+[4] CV Results:
+  LightGBM RMSE=0.65405 R2=0.56972
+  XGBoost  RMSE=0.66128 R2=0.56015
+  CatBoost RMSE=0.67383 R2=0.54330
+
+[5] Weighted Ensemble...
+  Weights: LGB=0.3379 XGB=0.3342 CAT=0.3280
+  Ensemble RMSE=0.65342 R2=0.57055
+
+[6] Saving...
+
+[7] Plotting...
+
+=======================================================
+ SUMMARY
+=======================================================
+  LightGBM   RMSE=0.65405  R2=0.56972  W=0.3379
+  XGBoost    RMSE=0.66128  R2=0.56015  W=0.3342
+  CatBoost   RMSE=0.67383  R2=0.54330  W=0.3280
+-------------------------------------------------------
+  Ensemble   RMSE=0.65342  R2=0.57055
+=======================================================
+  Ensemble improves 0.10% over best single model
+
+  Output: ./ensemble_result/
+  Files: ensemble_comparison.png/pdf, optuna_optimization.png, cv_summary.csv, test_predictions.csv
+=======================================================

@@ -1,0 +1,17 @@
+============================================================
+CropGBM Ensemble - Optuna 全量调参版
+  25 trials x 3 models x 5-fold CV
+============================================================
+
+[1] 加载数据...
+  训练集: 5643 样本, 4716 SNP
+  验证集: 93 样本
+  测试集: 100 样本
+  全量数据: 5736 样本
+
+[2] Optuna 贝叶斯优化 (25 trials x 3 models)...
+  Tuning LightGBM... Best=0.64454 (898s)
+    Params: {'learning_rate': 0.09657492013871477, 'num_leaves': 25, 'max_depth': 12, 'min_child_samples': 35, 'subsample': 0.5967911928810774, 'colsample_bytree': 0.5307046493565581, 'reg_alpha': 0.051860484516208505, 'reg_lambda': 8.492364144220217e-05, 'min_gain_to_split': 0.611446493359487}
+  Tuning XGBoost... Best=0.63683 (3229s)
+    Params: {'learning_rate': 0.019121844606676593, 'max_depth': 12, 'min_child_weight': 30, 'subsample': 0.6770170740795147, 'colsample_bytree': 0.6778032325916334, 'reg_alpha': 3.785146799825643e-05, 'reg_lambda': 0.016904045236602182, 'gamma': 0.5207621800327208}
+  Tuning CatBoost... 
